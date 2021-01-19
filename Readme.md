@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Ruslan R](https://up.htmlacademy.ru/htmlcss/30/user/1672121).
-* Наставник: `Неизвестно`.
+* Наставник: `[Анатолий Пазюк] (https://htmlacademy.ru/profile/id380487)`.
 
 ---
 
