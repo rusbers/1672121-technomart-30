@@ -221,7 +221,7 @@ img{
   color: var(--basic-red);
   margin: 0;
 }
-.phone-number a{
+.phone-number{
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -232,6 +232,7 @@ img{
   font-size: 14px;
   line-height: 24px;
   color: var(--dark-blue-bottom);
+  margin: 0;
 }
 .connect a{
   font-size: 21px;
@@ -245,7 +246,14 @@ img{
 .connect a:active{
   color: var(--active-grey);
 }
-
+.logout:hover path,
+.user-profile:hover path{
+  fill: var(--dark-blue-bottom);
+}
+.logout:active path,
+.user-profile:active path{
+  fill: var(--active-grey);
+}
 /* header-wrapper-bottom */
 
 .header-wrapper-bottom{
@@ -376,24 +384,28 @@ img{
 .heading-background{
   background-color: var(--background-grey);
 }
-.product-list{
+.popular-products .product-list{
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.popular-products .product-list{
   margin-bottom: 70px;
 }
 .product-list__item{
-  margin-right: 17px;
-  width: 220px;
   min-height: 318px;
+  width: 220px;
   border: 1px solid var(--border-white-smoke);
 }
-.product-list__item:nth-child(n+5){
+.popular-products .product-list__item{
+  margin-right: 17px;
+}
+.popular-products .product-list__item:nth-child(n+5){
   margin-top: 20px;
 }
-.product-list__item:nth-child(4n){
+.popular-products .product-list__item:nth-child(4n){
   margin-right: 0;
 }
 .product-name a{
@@ -451,7 +463,9 @@ img{
 .button-bookmark:active{
   opacity: 0.5;
 }
-
+.feature-item--hovered{
+  display: none;
+}
 /* popular-brands */
 
 .popular-brands__list{
@@ -692,41 +706,60 @@ img{
 }
 
 /* ==== CATALOG ==== */
-
+.catalog .product-list{
+  display: grid;
+  grid-template-columns: 220px 220px 220px;
+  grid-template-rows: 318px 318px 318px;
+  column-gap: 20px;
+  row-gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 48px;
+}
 .cart-buy-list a,
 .cart-buy-list a:hover,
 .cart-buy-list a:focus{
   background-color: var(--basic-red);
 }
-.loged-user a{
+.loged-user{
+  display: flex;
+  flex-direction: column;
+}
+.user{
+  background-color: var(--basic-white);
+}
+.user a{
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
-  background-color: var(--basic-white);
 }
-.user-orders a,
-.user-account a{
+.user-options{
+  display: flex;
+  justify-content: space-around;
+}
+.user-options a{
   font-size: 16px;
   line-height: 18px;
   color: var(--dark-blue-bottom);
 }
-.user-orders a:hover,
-.user-account a:hover{
+.user-options a:hover{
   color: var(--basic-red);
 }
-.loged-user a:active,
-.user-orders a:active,
-.user-account a:active{
+.loged-user a:active{
   color: var(--active-grey);
 }
-
 /* ==== BREADCRUMBS ==== */
 
 .breadcrumbs{
+  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
   grid-column: 1/-1;
+}
+.breadcrumbs-item{
+  padding-right: 40px;
 }
 .breadcrumbs-item,
 .breadcrumbs-item a{
@@ -747,7 +780,12 @@ img{
 }
 
 /* === FILTER === */
-.filter{
+.filter fieldset{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.filters{
   grid-row: 3/5;
 }
 .type-sort-title{
@@ -768,19 +806,36 @@ img{
   line-height: 19px;
   font-weight: 400;
 }
-
 /* === SORTING === */
 .sorting{
+  display: flex;
+  align-items: center;
   grid-column: 2/-1;
+  background-color: var(--background-filter-grey);
 }
 .sort-title{
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+  margin-right: auto;
+  margin-left: 20px;
+}
+.filters .sort-title{
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 18px;
+  padding-bottom: 10px;
+  margin-bottom: 14.5px;
+  max-width: 220px;
+  background-color: var(--background-filter-grey);
 }
 .sort-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: auto;
   list-style: none;
+  width: 459px;
   padding: 0;
   margin: 0;
 }
@@ -801,7 +856,18 @@ img{
   color: var(--basic-red);
   border-bottom: none;
 }
-
+.sort-by-price{
+  margin-right: 70px;
+}
+.sort-by-type{
+  margin-right: 65px;
+}
+.sort-by-functional{
+  margin-right: 46px;
+}
+.up-arrow{
+  margin-right: 21px;
+}
 /* === PRODUCT CATEGORY === */
 .product-category-info{
   background-color: var(--bassic-background);
@@ -814,9 +880,21 @@ img{
 /* ===PAGINATION=== */
 
 .pagination-list{
+  display: flex;
+  justify-content: flex-start;
+  min-width: 284px;
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 59px;
+}
+.pagination-list__item a{
+  margin-right: 10px;
+  padding: 10px 15px;
+}
+.next-page a{
+  padding-left: 32px;
+  padding-right: 31px;
 }
 .pagination-list__item a{
   font-family: "PT Sans", sans-serif;
