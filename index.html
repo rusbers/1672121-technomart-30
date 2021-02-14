@@ -18,16 +18,24 @@
     <div class="header-top-bar">
       <div class="header-wrapper-top container">
         <ul class="header-top-menu">
-          <li>
-            <a class="logo main-header-logo">
+          <li class="main-header-logo">
+            <a class="logo">
               <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт">
             </a>
           </li>
           <li class="search">
             <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-              <button class="search-button" type="submit">Submit</button>
-              <label class="visually-hidden" for="search">Найти на сайте</label>
-              <input class="search-field" type="text" name="search" id="search" placeholder="Поиск:">
+              <label class="form-label" for="search" aria-label="Найти на сайте">
+                <input class="search-field" type="text" name="search" autocomplete="off" id="search"
+                  placeholder="Поиск:">
+                <svg class="search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="search-icon__color" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
+                    fill="white" />
+                </svg>
+              </label>
+              <button class="visually-hidden search-button" type="submit">Нажмите чтобы найти</button>
             </form>
           </li>
           <li class="wishlist">
@@ -51,10 +59,19 @@
       </p>
       <ul class="header-connecting">
         <li class="header-contact">
-          <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <div class="phone-number-wrapper">
+            <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          </div>
           <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </li>
         <li class="connect sign-in">
+          <svg class="login-icon" width="20" height="17" viewBox="0 0 20 17" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5" />
+            <path
+              d="M16.177 15.01H11.3894V17H16.177C18.2513 17 19.038 15.19 19.0618 13.974V3.028C19.038 1.811 18.2513 0 16.177 0H11.3894V1.99H16.177C16.9761 1.99 17.1218 2.671 17.1389 3.047V13.951C17.1227 14.327 16.9761 15.01 16.177 15.01Z"
+              fill="#C5C5C5" />
+          </svg>
           <a href="blank.html">Войти</a>
         </li>
         <li class="connect sign-up">
@@ -66,25 +83,25 @@
     <div class="header-wrapper-bottom container">
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li>
+          <li class="site-navigation__item">
             <a href="index.html">Главная</a>
           </li>
-          <li>
+          <li class="site-navigation__item">
             <a href="blank.html">Компания</a>
           </li>
-          <li>
+          <li class="site-navigation__item">
             <a href="catalog.html">Каталог</a>
           </li>
-          <li>
+          <li class="site-navigation__item">
             <a href="blank.html">Новости</a>
           </li>
-          <li>
+          <li class="site-navigation__item">
             <a href="blank.html">Спецпредложения</a>
           </li>
-          <li>
+          <li class="site-navigation__item">
             <a href="blank.html">Доставка</a>
           </li>
-          <li>
+          <li class="site-navigation__item">
             <a href="blank.html">Контакты</a>
           </li>
         </ul>
@@ -133,25 +150,34 @@
         </li>
         <li class="promo-block__slider">
           <div class="promo-slider">
-            <div class="promo-slider__item">
-              <!-- <h3 class="promo-slider__item-title">ПЕРФОРАТОРЫ</h3>
-                <p class="promo-slider__item-description">Настоящие мужские игрушки</p> -->
+            <div class="promo-slider__item slide-1">
+              <h3 class="promo-slider__item-title">ПЕРФОРАТОРЫ</h3>
+              <p class="promo-slider__item-description">Настоящие мужские игрушки</p>
+              <a class="button slider-button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
               <img class="promo-slider__img" src="img/slide1-perforator.jpg" width="620" height="266"
                 alt="Слайд который относится к перфораторам">
-              <!-- <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a> -->
             </div>
-            <!-- <div class="promo-slider__item">
-                <h3 class="promo-slider__item-title">ДЕРЛИ</h3>
-                <p class="promo-slider__item-description">Соседям на радость!</p>
-                <img class="promo-slider__img" src="img/slide2-drill.jpg" width="620" height="266"
-                  alt="Слайд который относится к дрелям">
-              </div>
-              <ul class="slider-dots">
-                <li><button class="dot" type="button"><span class="visually-hidden">первая точка</span></button></li>
-                <li><button class="dot" type="button"><span class="visually-hidden">вторая точка</span></button></li>
-              </ul>
-              <button class="arrow-prev" type="button"><span class="visually-hidden">назад</span></button>
-              <button class="arrow-next" type="button"><span class="visually-hidden">вперед</span></button> -->
+
+            <div class="promo-slider__item slide-2" style="display: none;">
+              <h3 class="promo-slider__item-title">ДЕРЛИ</h3>
+              <p class="promo-slider__item-description">Соседям на радость!</p>
+              <a class="button slider-button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+              <img class="promo-slider__img" src="img/slide2-drill.jpg" width="620" height="266"
+                alt="Слайд который относится к дрелям">
+            </div>
+
+            <ul class="slider-dots">
+              <li><button class="dot" type="button"><span class="visually-hidden">первая точка</span></button></li>
+              <li><button class="dot dot-current" type="button"><span class="visually-hidden">вторая точка</span></button></li>
+            </ul>
+            <ul class="slider-arrows">
+              <li>
+                <button class="slide-arrow arrow-prev" type="button"><span class="visually-hidden">назад</span></button>
+              </li>
+              <li>
+                <button class="slide-arrow arrow-next" type="button"><span class="visually-hidden">вперед</span></button>
+              </li>
+            </ul>
           </div>
         </li>
       </ul>
@@ -223,7 +249,7 @@
     <section class="container popular-brands">
       <div class="heading heading-background">
         <h2 class="title">ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ:</h2>
-        <a class="button" href="blank.html">ВСЕ ПРОИЗВОДИТЕЛИ</a>
+        <a class="button popular-brands__button" href="blank.html">ВСЕ ПРОИЗВОДИТЕЛИ</a>
       </div>
       <ul class="popular-brands__list">
         <li class="popular-brands__list-item">
@@ -272,7 +298,8 @@
     <section class="services">
       <div class="container">
         <h2 class="title services-title">СЕРВИСЫ</h2>
-        <p class="text services-text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил,
+        <p class="text services-text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо
+          всех сил,
           чтобы сделать ваши покупки приятными.</p>
 
         <!--
