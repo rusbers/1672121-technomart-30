@@ -86,6 +86,10 @@
   --active-grey: #C5C5C5;
   --box-shadow-green: #367315;
   --box-shadow-blue: #405069;
+  --range-toggle-background: #ababab;
+  --price-controls-decoration-line: #444;
+  --filter-hovered-input: #b5b5b5;
+
   /* === RGB COLORS === */
   --basic-white-rgb: 255,255,255;
   --active-grey-rgb: 197,197,197;
@@ -93,7 +97,8 @@
   --basic-black-rgb: 0,0,0;
   --basic-red-rgb: 238,54,67;
   --red-active-rgb: 186,39,50;
-
+  --range-toggle-background-rgb: 171,171,171;
+  --filter-hovered-input-rgb: 181,181,181;
 }
 
 /* Global styles */
@@ -155,7 +160,7 @@ img{
 .main-header{
   background-color: var(--header-background-grey);
   padding-bottom: 60px;
-  margin-bottom: 59px;
+  margin-bottom: 21px;
 }
 
 /* header-wrapper-top */
@@ -241,6 +246,9 @@ img{
   left: 17px;
   top: 12px;
   z-index: 1;
+}
+.search-field::placeholder{
+  color: var(--basic-white);
 }
 .search-field[placeholder]{
   padding-top: 9px;
@@ -1227,8 +1235,8 @@ img{
 /* ==== CATALOG ==== */
 .catalog .product-list{
   display: grid;
-  grid-template-columns: 220px 220px 220px;
-  grid-template-rows: 318px 318px 318px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 318px;
   column-gap: 20px;
   row-gap: 18px;
   list-style: none;
@@ -1246,7 +1254,21 @@ img{
   flex-direction: column;
 }
 .user{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 45px;
   background-color: var(--basic-white);
+  margin-bottom: 7px;
+}
+.user-name{
+  margin: 0 20px 0 21px;
+}
+.user-profile{
+  margin-left: 15px;
+}
+.logout{
+  margin-right: 17px;
 }
 .user a{
   font-size: 21px;
@@ -1255,7 +1277,21 @@ img{
 }
 .user-options{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  position: relative;
+}
+.user-options a:first-child{
+  margin-right: 33px;
+}
+.user-options::after{
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 8px;
+  right: 161px;
+  background-color: var(--dark-blue-bottom);
+  border-radius: 50%;
 }
 .user-options a{
   font-size: 16px;
@@ -1279,6 +1315,24 @@ img{
 }
 .breadcrumbs-item{
   padding-right: 40px;
+  position: relative;
+}
+.breadcrumbs-item::after{
+  content: "";
+  width: 8px;
+  height: 12px;
+  top: 3px;
+  right: 17px;
+  background-image: url(../img/icons/icon-right-small.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.breadcrumbs-home::after{
+  right: 10px;
+}
+.breadcrumbs-current::after{
+  display: none;
+
 }
 .breadcrumbs-item,
 .breadcrumbs-item a{
@@ -1287,7 +1341,21 @@ img{
   line-height: 18px;
   color: var(--basic-black);
 }
-
+.breadcrumbs-item .breadcrumbs-item__home-pg-link{
+  align-self: center;
+}
+.breadcrumbs-item__home-pg-link{
+  position: relative;
+}
+.breadcrumbs-item__home-pg-link::before{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 12px;
+  top: 3px;
+  background-image: url(../img/icons/icon-home.svg);
+  background-repeat: no-repeat;
+}
 /* === product-category === */
 
 .product-category{
@@ -1304,6 +1372,88 @@ img{
   padding: 0;
   border: none;
 }
+.filter fieldset:last-of-type{
+  margin-bottom: 37px;
+}
+.filter .range-field,
+.filter .brands-field{
+  padding-bottom: 25px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(var(--basic-black-rgb), .1);
+}
+.range-filter{
+  width: 220px;
+  margin-top: 11px;
+
+}
+.range-controls{
+  position: relative;
+  height: 80px;
+  margin-bottom: 9px;
+  background-color: var(--background-filter-grey);
+  border-radius: 5px;
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+}
+.range-controls .scale{
+  height: 2px;
+  background: var(--form-range-grey);
+}
+.range-controls .bar{
+  height: 2px;
+  background-color: var(--form-range-green);
+}
+.range-controls .toggle{
+  box-sizing: content-box;
+  position: absolute;
+  top: 33px;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  background-color: var(--range-toggle-background);
+  border: 6px solid var(--basic-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(var(--range-toggle-background-rgb), .3);
+  cursor: pointer;
+}
+.toggle-min{
+  left: 18px;
+}
+.toggle-max{
+  left: 136px;
+}
+.price-controls{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.price-controls::before{
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 1px;
+  left: 48%;
+  top: 50%;
+  background-color: var(--price-controls-decoration-line);
+}
+.price-controls label{
+  font-family: "PT Sans", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.price-controls input{
+  width: 95px;
+  height: 38px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  background-color: var(--background-filter-grey);
+  font-family: inherit;
+  font-size: inherit;
+}
 .filters{
   grid-row: 3/5;
 }
@@ -1313,17 +1463,112 @@ img{
   line-height: 30px;
   font-weight: 700;
 }
+.brands-field .type-sort-title,
+.charge-type-field .type-sort-title{
+  margin-bottom: 15px;
+}
 .brands-field__list,
 .charge-type-field__list{
   list-style: none;
-  padding: 0;
   margin: 0;
 }
-.sort-by{
+.brands-field__list .filter-option:not(:last-child){
+  margin-bottom: 20px;
+}
+.charge-type-field__list .filter-option:not(:last-child){
+  margin-bottom: 22.5px;
+}
+.filter-option{
   font-family: "PT Sans", sans-serif;
   font-size: 15px;
   line-height: 19px;
   font-weight: 400;
+}
+.filter-option label{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none; /* отменяем выделение текста подписи цветом. */
+}
+.filter-input-checkbox + label::before{
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: -2px;
+  left: -41px;
+  border: 2px solid var(--active-grey);
+  border-radius: 4px;
+}
+.checked-option{
+  position: absolute;
+  left: -40px;
+  top: -5px;
+  display: none;
+}
+.filter-input-checkbox:checked + label .checked-option{
+  display: block;
+}
+
+.filter__button{
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  background: transparent;
+  border: 1px solid var(--border-grey);
+  padding: 0;
+  height: 38px;
+  width: 100%;
+}
+.filter-input-radio + label::before{
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -41px;
+  width: 25px;
+  height: 25px;
+  border: 3px solid var(--active-grey);
+  border-radius: 50%;
+}
+.filter-input-radio:checked + label::after{
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -33px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--active-grey);
+  border-radius: 50%;
+}
+.filter-input-radio:hover + label::before,
+.filter-input-checkbox:hover + label::before{
+  border-color: var(--filter-hovered-input);
+}
+.filter-input-radio:checked:hover + label::after{
+  background-color: var(--filter-hovered-input);
+}
+.filter-input-checkbox:checked:hover + label .checked-option__color{
+  fill: var(--filter-hovered-input);
+}
+.filter-input-checkbox:disabled + label,
+.filter-input-radio:disabled + label,
+.filter-input-radio:disabled + label::before,
+.filter-input-checkbox:disabled + label::before,
+.filter-input-radio:disabled:hover + label::before,
+.filter-input-checkbox:disabled:hover + label::before,
+.filter-input-radio:disabled + label::after
+{
+  color: rgba(var(--filter-hovered-input-rgb), .3);
+  border-color: rgba(var(--filter-hovered-input-rgb), .3);
+}
+.filter-input-radio:disabled:hover + label::after,
+.filter-input-radio:disabled + label::after{
+  background-color: rgba(var(--filter-hovered-input-rgb), .3);
+}
+.filter-input-checkbox:disabled + label .checked-option__color,
+.filter-input-checkbox:disabled:hover + label .checked-option__color{
+  fill: rgba(var(--filter-hovered-input-rgb), .3);
 }
 /* === SORTING === */
 .sorting{
@@ -1375,6 +1620,10 @@ img{
   color: var(--basic-red);
   border-bottom: none;
 }
+.sort-list__item.current-option a{
+  color: var(--basic-red);
+  border-bottom: none;
+}
 .sort-by-price{
   margin-right: 70px;
 }
@@ -1386,6 +1635,12 @@ img{
 }
 .up-arrow{
   margin-right: 21px;
+}
+.arrow:hover path {
+  fill: var(--basic-black);
+}
+.up-arrow.sort-direction--current path{
+  fill: var(--basic-red)
 }
 /* === PRODUCT CATEGORY === */
 .product-category-info{
