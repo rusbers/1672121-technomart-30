@@ -195,7 +195,7 @@
         <li class="product-list__item">
 
           <div class="feature-item">
-            <img class="product-img" src="img/perforator-bosch-bfg-9000.jpg" width="184" height="164"
+            <img class="product-img" src="img/BFG-9000.jpg" width="200" height="164"
               alt="Перфоратор BOSCH BFG 9000">
           </div>
 
@@ -219,7 +219,7 @@
           <span class="new-item">NEW</span>
 
           <div class="feature-item">
-            <img class="product-img" src="img/perforator-bosch-bfg-3000.jpg" width="127" height="112"
+            <img class="product-img ajusted-img-BFG-3000-2000" src="img/BFG-3000_2000.jpg" width="200" height="164"
               alt="Перфоратор BOSCH BFG 3000">
           </div>
 
@@ -241,7 +241,7 @@
         <li class="product-list__item">
 
           <div class="feature-item">
-            <img class="product-img" src="img/perforator-bosch-bfg-6000.jpg" width="144" height="128"
+            <img class="product-img ajusted-img-BFG-6000" src="img/BFG-6000.jpg" width="200" height="164"
               alt="Перфоратор BOSCH BFG 6000">
           </div>
 
@@ -263,7 +263,7 @@
         <li class="product-list__item">
           <span class="new-item">NEW</span>
           <div class="feature-item">
-            <img class="product-img" src="img/perforator-bosch-bfg-2000.jpg" width="127" height="112"
+            <img class="product-img ajusted-img-BFG-3000-2000" src="img/BFG-3000_2000.jpg" width="200" height="164"
               alt="Перфоратор BOSCH BFG 2000">
           </div>
 
@@ -287,7 +287,7 @@
 
     <section class="container popular-brands">
       <div class="heading heading-background">
-        <h2 class="title">ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ:</h2>
+        <h2 class="title popular-brands__title">ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ:</h2>
         <a class="button popular-brands__button" href="blank.html">ВСЕ ПРОИЗВОДИТЕЛИ</a>
       </div>
 
@@ -362,7 +362,7 @@
             </p>
           </div>
 
-          <div class="services-slider-item credit__slide">
+          <div class="services-slider-item credit__slide" style="display: block">
             <h3 class="title services-slider__title">КРЕДИТ</h3>
             <p class="text services-slider-item__description">
               Залезть в долговую яму стало проще! <br>
@@ -372,9 +372,9 @@
           </div>
 
           <div class="service-slider-buttons">
-            <button class="service-btn" type="button">ДОСТАВКА</button>
-            <button class="service-btn" type="button">ГАРАНТИЯ</button>
-            <button class="service-btn" type="button">КРЕДИТ</button>
+            <button class="service-btn" type="button">Доставка</button>
+            <button class="service-btn" type="button">Гарантия</button>
+            <button class="service-btn" type="button">Кредит</button>
           </div>
 
         </div>
@@ -515,13 +515,49 @@
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <p class="footer-designed-by">
-            Разработано:
+            Разработано &mdash;
             <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
           </p>
         </div>
       </div>
     </div>
   </footer>
-</body>
 
+  <section class="modal modal-feedback">
+
+    <h2 class="visually-hidden">Если не можете нас найти - напишите нам!</h2>
+
+    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="feedback-form__input-part">
+        <div class="user-information-fields">
+          <div class="feedback-form__fields">
+            <label for="username">Ваше имя:</label>
+            <input id="username" type="text" name="username" placeholder="Имя Фамилия">
+          </div>
+
+          <div class="feedback-form__fields">
+            <label for="user-email">Ваш e-mail:</label>
+            <input id="user-email" type="email" name="user-email" placeholder="email@example.com">
+          </div>
+        </div>
+
+        <div class="feedback-form__fields">
+          <label for="text-message">Текст письма:</label>
+          <textarea class="textarea-feedback" id="text-message" name="user-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        </div>
+      </div>
+
+      <div class="form-button-container">
+        <button class="feedback-form__send" type="submit">ОТПРАВИТЬ</button>
+      </div>
+    </form>
+
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6018438188548!2d30.320772885408502!3d59.93874872797896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Rusia%2C%20191186!5e0!3m2!1sro!2sro!4v1613562741178!5m2!1sro!2sro" width="943" height="449" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
+</body>
 </html>
