@@ -20,23 +20,22 @@
       <div class="header-wrapper-top container">
         <ul class="header-top-menu">
           <li class="main-header-logo">
-            <a class="logo" href="index.html">
+            <a class="logo" href="index.html" aria-label="Логотип магазина Техномарт, нажмите на него чтобы попасть на домашнюю страницу.">
               <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт">
             </a>
           </li>
           <li class="search">
             <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-              <label class="form-label" for="search" aria-label="Найти на сайте">
-                <input class="search-field" type="text" name="search" autocomplete="off" id="search"
-                  placeholder="Поиск:">
-                <svg class="search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+              <label class="form-label" for="search" aria-label="Введите в поле поиска ваш запрос">
+                <input class="search-field" type="text" name="search" autocomplete="off" id="search" placeholder="Поиск:">
+                <svg class="search-icon" aria-hidden="true" focusable="false" width="17" height="17" viewBox="0 0 17 17" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="search-icon__color" fill-rule="evenodd" clip-rule="evenodd"
                     d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
                     fill="white" />
                 </svg>
               </label>
-              <button class="visually-hidden search-button" type="submit">Нажмите чтобы найти</button>
+              <!-- <button class="visually-hidden search-button" type="submit">Нажмите чтобы найти</button> -->
             </form>
           </li>
           <li class="header-top-menu__buttons wishlist">
@@ -61,7 +60,7 @@
       <ul class="header-connecting">
         <li class="header-contact">
           <div class="phone-number-wrapper">
-            <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <a class="phone-number" href="tel:+78125550555" aria-label="Номер телефона по которому вы можете позвонить нам!">+7 (812) 555-05-55</a>
           </div>
           <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </li>
@@ -70,7 +69,7 @@
 
           <div class="user">
 
-            <a class="user-profile" href="blank.html">
+            <a class="user-profile" href="blank.html" aria-label="Нажмите чтобы перейти на ваш профайл">
               <svg class="user-profile__icon" width="20" height="18" viewBox="0 0 20 18" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path class="test"
@@ -81,7 +80,7 @@
 
             <a class="user-name" href="blank.html">Равшан Джамшутович </a>
 
-            <a class="logout" href="blank.html">
+            <a class="logout" href="blank.html" aria-label="Нажмите чтобы перейти на страницу деавторизации">
               <svg class="logout__icon" width="20" height="17" viewBox="0 0 20 17" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5" />
@@ -161,8 +160,8 @@
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar" style="width: 83%; margin-left: 0%">
-                    <div class="toggle toggle-min" tabindex="0" style="left: 9%"></div>
-                    <div class="toggle toggle-max" tabindex="0" style="left: 74%;"></div>
+                    <div class="toggle toggle-min" tabindex="0" style="left: 9%" aria-label="Ручка диапозона цены: выбрать минимальную стоимость"></div>
+                    <div class="toggle toggle-max" tabindex="0" style="left: 74%" aria-label="Ручка диапозона цены: выбрать максимальную стоимость"></div>
                   </div>
                 </div>
               </div>
@@ -185,7 +184,7 @@
                 <label for="filter-bosch">
                   <svg class="checked-option" width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="checked-option__color" d="M6.99203 8.7788L6.28492 8.07183L5.57789 8.77887L2.74889 11.6079L2.04178 12.315L2.74889 13.0221L10.5319 20.8051L11.239 21.5122L11.9461 20.8051L25.8781 6.87308L26.5851 6.1661L25.8782 5.45899L23.0502 2.62999L22.3432 1.9227L21.636 2.6298L11.239 13.0249L6.99203 8.7788Z"
-                      fill="#c5c5c5" stroke="white" stroke-width="2"></path>
+                      fill="#c5c5c5" stroke="white" stroke-width="1"></path>
                   </svg>
                   BOSCH
                 </label>
@@ -196,7 +195,7 @@
                 <label for="filter-interskol">
                   <svg class="checked-option" width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="checked-option__color" d="M6.99203 8.7788L6.28492 8.07183L5.57789 8.77887L2.74889 11.6079L2.04178 12.315L2.74889 13.0221L10.5319 20.8051L11.239 21.5122L11.9461 20.8051L25.8781 6.87308L26.5851 6.1661L25.8782 5.45899L23.0502 2.62999L22.3432 1.9227L21.636 2.6298L11.239 13.0249L6.99203 8.7788Z"
-                      fill="#c5c5c5" stroke="white" stroke-width="2"></path>
+                      fill="#c5c5c5" stroke="white" stroke-width="1"></path>
                   </svg>
                   ИНТЕРСКОЛ
                 </label>
@@ -207,7 +206,7 @@
                 <label for="filter-makita">
                   <svg class="checked-option" width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="checked-option__color" d="M6.99203 8.7788L6.28492 8.07183L5.57789 8.77887L2.74889 11.6079L2.04178 12.315L2.74889 13.0221L10.5319 20.8051L11.239 21.5122L11.9461 20.8051L25.8781 6.87308L26.5851 6.1661L25.8782 5.45899L23.0502 2.62999L22.3432 1.9227L21.636 2.6298L11.239 13.0249L6.99203 8.7788Z"
-                      fill="#c5c5c5" stroke="white" stroke-width="2"></path>
+                      fill="#c5c5c5" stroke="white" stroke-width="1"></path>
                   </svg>
                   MAKITA
                 </label>
@@ -218,7 +217,7 @@
                 <label for="filter-dewalt">
                   <svg class="checked-option" width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="checked-option__color" d="M6.99203 8.7788L6.28492 8.07183L5.57789 8.77887L2.74889 11.6079L2.04178 12.315L2.74889 13.0221L10.5319 20.8051L11.239 21.5122L11.9461 20.8051L25.8781 6.87308L26.5851 6.1661L25.8782 5.45899L23.0502 2.62999L22.3432 1.9227L21.636 2.6298L11.239 13.0249L6.99203 8.7788Z"
-                      fill="#c5c5c5" stroke="white" stroke-width="2"></path>
+                      fill="#c5c5c5" stroke="white" stroke-width="1"></path>
                   </svg>
                   DEWALT
                 </label>
@@ -229,7 +228,7 @@
                 <label for="filter-hitachi">
                   <svg class="checked-option" width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="checked-option__color" d="M6.99203 8.7788L6.28492 8.07183L5.57789 8.77887L2.74889 11.6079L2.04178 12.315L2.74889 13.0221L10.5319 20.8051L11.239 21.5122L11.9461 20.8051L25.8781 6.87308L26.5851 6.1661L25.8782 5.45899L23.0502 2.62999L22.3432 1.9227L21.636 2.6298L11.239 13.0249L6.99203 8.7788Z"
-                      fill="#c5c5c5" stroke="white" stroke-width="2"></path>
+                      fill="#c5c5c5" stroke="white" stroke-width="1"></path>
                   </svg>
                   HITACHI
                 </label>
@@ -259,16 +258,16 @@
         <h2 class="sort-title">СОРТИРОВКА:</h2>
         <ul class="sort-list">
           <li class="sort-list__item sort-by-price current-option">
-            <a href="blank.html">ПО ЦЕНЕ</a>
+            <a href="blank.html" aria-label="Сортировка по цене">ПО ЦЕНЕ</a>
           </li>
           <li class="sort-list__item sort-by-type">
-            <a href="blank.html">ПО ТИПУ</a>
+            <a href="blank.html" aria-label="Сортировка по типу">ПО ТИПУ</a>
           </li>
           <li class="sort-list__item sort-by-functional">
-            <a href="blank.html">ПО ФУНКЦИОНАЛУ</a>
+            <a href="blank.html" aria-label="Сортировка по функционалу">ПО ФУНКЦИОНАЛУ</a>
           </li>
           <li class="arrow up-arrow sort-direction--current">
-            <a href="#">
+            <a href="#" aria-label="Сортировать по возрастанию">
               <svg class="arrow" width="11" height="10" viewBox="0 0 11 10" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
@@ -276,7 +275,7 @@
             </a>
           </li>
           <li class="arrow down-arrow">
-            <a href="#">
+            <a href="#" aria-label="Сортировать по убыванию">
               <svg class="arrow" width="11" height="10" viewBox="0 0 11 10" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 10L0 0H11" fill="#C5C5C5" />
@@ -299,8 +298,8 @@
 
             <div class="feature-item--hovered">
               <div class="item-option">
-                <a class="button-buy" href="blank.html">КУПИТЬ</a>
-                <a class="button-bookmark" href="blank.html">ЗАКЛАДКИ</a>
+                <a class="button-buy" href="blank.html" aria-label="Добавить товар в корзину">КУПИТЬ</a>
+                <a class="button-bookmark" href="blank.html" aria-label="Добавить товар в закладки">ЗАКЛАДКИ</a>
               </div>
             </div>
 
@@ -321,8 +320,8 @@
             </div>
             <div class="feature-item--hovered">
               <div class="item-option">
-                <a class="button-buy" href="blank.html">КУПИТЬ</a>
-                <a class="button-bookmark" href="blank.html">ЗАКЛАДКИ</a>
+                <a class="button-buy" href="blank.html" aria-label="Добавить товар в корзину">КУПИТЬ</a>
+                <a class="button-bookmark" href="blank.html" aria-label="Добавить товар в закладки">ЗАКЛАДКИ</a>
               </div>
             </div>
             <div class="product-item__details">
@@ -340,8 +339,8 @@
             </div>
             <div class="feature-item--hovered">
               <div class="item-option">
-                <a class="button-buy" href="blank.html">КУПИТЬ</a>
-                <a class="button-bookmark" href="blank.html">ЗАКЛАДКИ</a>
+                <a class="button-buy" href="blank.html" aria-label="Добавить товар в корзину">КУПИТЬ</a>
+                <a class="button-bookmark" href="blank.html" aria-label="Добавить товар в закладки">ЗАКЛАДКИ</a>
               </div>
             </div>
             <div class="product-item__details">
@@ -360,8 +359,8 @@
             </div>
             <div class="feature-item--hovered">
               <div class="item-option">
-                <a class="button-buy" href="blank.html">КУПИТЬ</a>
-                <a class="button-bookmark" href="blank.html">ЗАКЛАДКИ</a>
+                <a class="button-buy" href="blank.html" aria-label="Добавить товар в корзину">КУПИТЬ</a>
+                <a class="button-bookmark" href="blank.html" aria-label="Добавить товар в закладки">ЗАКЛАДКИ</a>
               </div>
             </div>
             <div class="product-item__details">
@@ -379,8 +378,8 @@
             </div>
             <div class="feature-item--hovered">
               <div class="item-option">
-                <a class="button-buy" href="blank.html">КУПИТЬ</a>
-                <a class="button-bookmark" href="blank.html">ЗАКЛАДКИ</a>
+                <a class="button-buy" href="blank.html" aria-label="Добавить товар в корзину">КУПИТЬ</a>
+                <a class="button-bookmark" href="blank.html" aria-label="Добавить товар в закладки">ЗАКЛАДКИ</a>
               </div>
             </div>
             <div class="product-item__details">
@@ -399,14 +398,13 @@
             </div>
             <div class="feature-item--hovered">
               <div class="item-option">
-                <a class="button-buy" href="blank.html">КУПИТЬ</a>
-                <a class="button-bookmark" href="blank.html">ЗАКЛАДКИ</a>
+                <a class="button-buy" href="blank.html" aria-label="Добавить товар в корзину">КУПИТЬ</a>
+                <a class="button-bookmark" href="blank.html" aria-label="Добавить товар в закладки">ЗАКЛАДКИ</a>
               </div>
             </div>
             <div class="product-item__details">
               <h3 class="product-name"><a href="blank.html">Перфоратор BOSCH BFG 2000</a></h3>
               <div class="article-price">
-                <!-- <span class="old-price">22500 Р.</span> -->
                 <p class="discount-price">12500 Р.</p>
               </div>
             </div>
@@ -419,8 +417,8 @@
             </div>
             <div class="feature-item--hovered">
               <div class="item-option">
-                <a class="button-buy" href="blank.html">КУПИТЬ</a>
-                <a class="button-bookmark" href="blank.html">ЗАКЛАДКИ</a>
+                <a class="button-buy" href="blank.html" aria-label="Добавить товар в корзину">КУПИТЬ</a>
+                <a class="button-bookmark" href="blank.html" aria-label="Добавить товар в закладки">ЗАКЛАДКИ</a>
               </div>
             </div>
             <div class="product-item__details">
@@ -438,8 +436,8 @@
             </div>
             <div class="feature-item--hovered">
               <div class="item-option">
-                <a class="button-buy" href="blank.html">КУПИТЬ</a>
-                <a class="button-bookmark" href="blank.html">ЗАКЛАДКИ</a>
+                <a class="button-buy" href="blank.html" aria-label="Добавить товар в корзину">КУПИТЬ</a>
+                <a class="button-bookmark" href="blank.html" aria-label="Добавить товар в закладки">ЗАКЛАДКИ</a>
               </div>
             </div>
             <div class="product-item__details">
@@ -458,25 +456,23 @@
             </div>
             <div class="feature-item--hovered">
               <div class="item-option">
-                <a class="button-buy" href="blank.html">КУПИТЬ</a>
-                <a class="button-bookmark" href="blank.html">ЗАКЛАДКИ</a>
+                <a class="button-buy" href="blank.html" aria-label="Добавить товар в корзину">КУПИТЬ</a>
+                <a class="button-bookmark" href="blank.html" aria-label="Добавить товар в закладки">ЗАКЛАДКИ</a>
               </div>
             </div>
             <div class="product-item__details">
               <h3 class="product-name"><a href="blank.html">Перфоратор BOSCH BFG 2000</a></h3>
               <div class="article-price">
-                <!-- <span class="old-price">22500 Р.</span> -->
                 <p class="discount-price">12500 Р.</p>
               </div>
             </div>
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-list__item pagination-list__item--current-pg"><a>1</a></li>
-          <!-- Убрал href потому-что это текущая страница и следовательно она никуда не ведет -->
-          <li class="pagination-list__item"><a href="#">2</a></li>
-          <li class="pagination-list__item"><a href="#">3</a></li>
-          <li class="pagination-list__item next-page"><a href="#">СЛЕДУЮЩАЯ</a></li>
+          <li class="pagination-list__item pagination-list__item--current-pg"><a aria-label="Текущая страница результата сортировки товаров">1</a></li>
+          <li class="pagination-list__item"><a href="#" aria-label="Вторая страница результата сортировки товаров">2</a></li>
+          <li class="pagination-list__item"><a href="#" aria-label="Третья страница результата сортировки товаров">3</a></li>
+          <li class="pagination-list__item next-page"><a href="#" aria-label="Перейти на следующую страницу результата сортировки товаров">СЛЕДУЮЩАЯ</a></li>
         </ul>
       </section>
     </div>
@@ -513,13 +509,14 @@
         </section>
       </div>
     </div>
+
     <div class="footer-middle-bar">
       <div class="footer-wrapper-middle container">
         <section class="footer-contacts">
           <h2 class="visually-hidden">Как нас найти</h2>
-          <p class="footer-contacts__find-us">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a
-              href="tel:+78125550555">+7
-              (812) 555-05-55</a></p>
+          <p class="footer-contacts__find-us">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            <a href="tel:+78125550555" aria-label="Номер телефона по которому вы можете нам позвонить">+7(812) 555-05-55</a>
+          </p>
         </section>
         <ul class="categories-list">
           <li class="categories-list-item"><a href="blank.html">Материалы</a></li>
@@ -529,17 +526,20 @@
         </ul>
       </div>
     </div>
+
     <div class="footer-bottom-bar">
       <div class="footer-wrapper-bottom container">
+
         <p class="footer-copyright">
           © 2010–2019 Компания «Техномарт» Все права защищены
         </p>
+
         <section class="footer-social">
           <h2 class="visually-hidden">Давайте дружить!</h2>
           <ul class="footer-social-list">
             <li class="footer-social-vk">
-              <a href="blank.html">
-                <svg class="social-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"
+              <a href="blank.html" aria-label="Перейти на нашу страницу в Вконтакте">
+                <svg class="social-icon" aria-hidden="true" focusable="false"  width="44" height="44" viewBox="0 0 44 44" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="social-icon-bg" fill-rule="evenodd" clip-rule="evenodd"
                     d="M22.1627 1.4839C33.6533 1.4839 42.9683 10.5873 42.9683 21.8169C42.9683 33.0461 33.6533 42.1494 22.1627 42.1494C10.6721 42.1494 1.35714 33.0461 1.35714 21.8169C1.35714 10.5873 10.6721 1.4839 22.1627 1.4839Z"
@@ -548,12 +548,11 @@
                     d="M24.5403 25.7281C25.4609 25.4384 26.6395 27.6406 27.8943 28.4834C28.836 29.1219 29.5573 28.9841 29.5573 28.9841L32.9017 28.9372C32.9017 28.9372 34.6495 28.8322 33.8232 27.4803C33.7549 27.3678 33.3389 26.4781 31.334 24.6472C29.2376 22.7319 29.5217 23.0422 32.0456 19.7309C33.5835 17.7125 34.1988 16.4797 34.0062 15.9547C33.8213 15.4494 32.6918 15.5806 32.6918 15.5806L28.9237 15.6059C28.5568 15.6069 28.2458 15.7175 28.1042 16.0887C28.1013 16.0925 27.5062 17.6506 26.7127 18.9753C25.0362 21.7775 24.3669 21.9266 24.0896 21.7512C23.4531 21.3453 23.6139 20.1228 23.6139 19.2537C23.6139 16.5378 24.0299 15.4053 22.7992 15.1128C22.388 15.0153 22.0876 14.9516 21.0389 14.9422C19.6985 14.9225 18.5603 14.9422 17.9151 15.2506C17.4866 15.4597 17.1582 15.9181 17.3575 15.9444C17.6079 15.9772 18.1693 16.0944 18.4697 16.4937C18.8559 17.0112 18.8443 18.1709 18.8443 18.1709C18.8443 18.1709 19.0649 21.3687 18.3243 21.7653C17.8159 22.0372 17.1206 21.4822 15.6252 18.9378C14.8615 17.6366 14.2847 16.1984 14.2847 16.1984C14.2847 16.1984 14.173 15.9312 13.9708 15.785C13.73 15.6116 13.393 15.5562 13.393 15.5562L9.81656 15.5787C9.81656 15.5787 9.27923 15.5937 9.08182 15.8244C8.90656 16.0287 9.06738 16.4506 9.06738 16.4506C9.06738 16.4506 11.8686 22.9016 15.0406 26.1509C17.9488 29.1341 21.2537 28.9362 21.2537 28.9362H22.7511C22.7511 28.9362 23.2027 28.8856 23.4338 28.6437C23.6495 28.4187 23.6399 27.9959 23.6399 27.9959C23.6399 27.9959 23.61 26.0187 24.5403 25.7281Z"
                     fill="white" />
                 </svg>
-                <span class="visually-hidden">vkontakte</span>
               </a>
             </li>
             <li class="footer-social-fb">
-              <a href="blank.html">
-                <svg class="social-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"
+              <a href="blank.html" aria-label="Перейти на нашу страницу в Фейсбуке">
+                <svg class="social-icon" aria-hidden="true" focusable="false"  width="44" height="44" viewBox="0 0 44 44" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="social-icon-bg" fill-rule="evenodd" clip-rule="evenodd"
                     d="M21.8938 1.4839C33.1232 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1232 42.1494 21.8938 42.1494C10.6643 42.1494 1.56108 33.0461 1.56108 21.8169C1.56108 10.5873 10.6643 1.4839 21.8938 1.4839Z"
@@ -561,33 +560,32 @@
                   <path d="M28 15V11H24C21.7909 11 20 12.7909 20 15V19H16V23H20V33H24V23H28V19H24V15H28Z"
                     fill="white" />
                 </svg>
-                <span class="visually-hidden">facebook</span>
               </a>
             </li>
             <li class="footer-social-insta">
-              <a href="blank.html">
-                <svg class="social-icon" width="44" height="44" viewBox="0 0 44 44" fill="none"
+              <a href="blank.html" aria-label="Перейти на нашу страницу в Инстаграме">
+                <svg class="social-icon" aria-hidden="true" focusable="false"  width="44" height="44" viewBox="0 0 44 44" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="social-icon-bg" fill-rule="evenodd" clip-rule="evenodd"
                     d="M21.8938 1.4839C33.1233 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1233 42.1494 21.8938 42.1494C10.6643 42.1494 1.56112 33.0461 1.56112 21.8169C1.56112 10.5873 10.6643 1.4839 21.8938 1.4839Z"
                     fill="#212A3A" />
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M14 11H29C30.65 11 32 12.35 32 14V29C32 30.65 30.65 32 29 32H14C12.35 32 11 30.65 11 29V14C11 12.35 12.35 11 14 11ZM25 21.5C25 19.57 23.43 18 21.5 18C19.57 18 18 19.57 18 21.5C18 23.43 19.57 25 21.5 25C23.43 25 25 23.43 25 21.5ZM14 29V20H15.181C15.0626 20.4913 15.0019 20.9947 15 21.5C15 25.0899 17.9101 28 21.5 28C25.0899 28 28 25.0899 28 21.5C27.9986 20.9946 27.9379 20.4912 27.819 20H29V29H14ZM25 18H29V14H25V18Z"
-                    fill="white" />
+                    fill="white"/>
                 </svg>
-                <span class="visually-hidden">instagram</span>
               </a>
             </li>
           </ul>
         </section>
+
         <div class="footer-bottom-feedback">
           <p class="footer-mail">
             Обратная связь:
-            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a href="mailto:mail@htmlacademy.ru" aria-label="Написать нам на почту mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <p class="footer-designed-by">
-            Разработано:
-            <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+            Разработано &mdash;
+            <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт разработан с попмощью HTML Academy">HTML Academy</a>
           </p>
         </div>
       </div>
