@@ -160,7 +160,7 @@
                 <button class="slide-arrow arrow-next" type="button"><span class="visually-hidden">Перейти на следующий слайд</span></button>
               </li>
             </ul>
-            <div class="promo-slider__item slide-1">
+            <div class="promo-slider__item slide-1 current-slide">
               <div class="promo-slider-background">
                 <h3 class="promo-slider__item-title">ПЕРФОРАТОРЫ</h3>
                 <p class="promo-slider__item-description">Настоящие мужские игрушки</p>
@@ -181,8 +181,8 @@
             </div>
 
             <ul class="slider-dots">
-              <li><button class="dot" type="button"><span class="visually-hidden">Первый слайд</span></button></li>
-              <li><button class="dot dot-current" type="button"><span class="visually-hidden">Второй слайд</span></button></li>
+              <li><button class="dot slider-dot-1 dot--current" type="button"><span class="visually-hidden">Первый слайд</span></button></li>
+              <li><button class="dot slider-dot-2" type="button"><span class="visually-hidden">Второй слайд</span></button></li>
             </ul>
           </div>
         </li>
@@ -356,12 +356,12 @@
         <div class="services-slider">
 
           <div class="service-slider-buttons">
-            <button class="service-btn" type="button" aria-label="Перейти к условиям доставки">Доставка</button>
-            <button class="service-btn" type="button" aria-label="Перейти к условиям гарантии">Гарантия</button>
-            <button class="service-btn" type="button" aria-label="Перейти к условиям кредитования">Кредит</button>
+            <button class="service-btn service-btn__delivery service-btn--active" type="button" aria-label="Перейти к условиям доставки">Доставка</button>
+            <button class="service-btn service-btn__guarantee" type="button" aria-label="Перейти к условиям гарантии">Гарантия</button>
+            <button class="service-btn service-btn__credit" type="button" aria-label="Перейти к условиям кредитования">Кредит</button>
           </div>
 
-          <div class="services-slider-item delivery__slide" style="display: none">
+          <div class="services-slider-item delivery__slide services-slider-item--active">
             <h3 class="title services-slider__title">ДОСТАВКА</h3>
             <p class="text services-slider-item__description">
               Мы с удовольствием доставим ваш товар прямо <br>
@@ -371,7 +371,7 @@
             </p>
           </div>
 
-          <div class="services-slider-item guarantee__slide" style="display: none">
+          <div class="services-slider-item guarantee__slide">
             <h3 class="title services-slider__title">ГАРАНТИЯ</h3>
             <p class="text services-slider-item__description">
               Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его
@@ -380,7 +380,7 @@
             </p>
           </div>
 
-          <div class="services-slider-item credit__slide" style="display: block">
+          <div class="services-slider-item credit__slide">
             <h3 class="title services-slider__title">КРЕДИТ</h3>
             <p class="text services-slider-item__description">
               Залезть в долговую яму стало проще! <br>
@@ -543,12 +543,12 @@
         <div class="user-information-fields">
           <div class="feedback-form__fields">
             <label for="username">Ваше имя:</label>
-            <input id="username" type="text" name="username" placeholder="Имя Фамилия">
+            <input class="username" id="username" type="text" name="username" placeholder="Имя Фамилия">
           </div>
 
           <div class="feedback-form__fields">
             <label for="user-email">Ваш e-mail:</label>
-            <input id="user-email" type="email" name="user-email" placeholder="email@example.com">
+            <input class="user-email" id="user-email" type="email" name="user-email" placeholder="email@example.com">
           </div>
         </div>
 
@@ -563,14 +563,29 @@
       </div>
     </form>
 
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    <button class="modal-close modal-close--feedback" type="button" aria-label="Закрыть"></button>
   </section>
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6018438188548!2d30.320772885408502!3d59.93874872797896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Rusia%2C%20191186!5e0!3m2!1sro!2sro!4v1613562741178!5m2!1sro!2sro" width="943" height="449" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    <button class="modal-close modal-close--map" type="button" aria-label="Закрыть"></button>
   </section>
+
+  <section class="modal modal-add-to-cart">
+    <h2 class="visually-hidden">Ваш товар добавлен в корзину</h2>
+
+    <p class="add-to-cart__notification">
+      Товар добавлен в корзину!
+    </p>
+
+    <div class="form-button-container">
+      <button class="add-to-cart__button place-your-order">ОФОРМИТЬ ЗАКАЗ</button>
+      <button class="add-to-cart__button continue-shopping">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+    </div>
+    <button class="modal-close modal-add-to-cart--close" type="button" aria-label="Закрыть"></button>
+  </section>
+
 <script src="js/scripts.js"></script>
 </body>
 </html>

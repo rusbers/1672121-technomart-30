@@ -141,6 +141,39 @@ img{
   overflow: hidden;
 }
 
+/* === ANIMATIONS === */
+
+@keyframes bounce {
+  0% {
+      transform: translate(-50%, -2000px);
+  }
+  50% {
+      transform: translate(-50%, -130px);
+  }
+  70% {
+      transform: translate(-50%, -295px);
+  }
+  to {
+      transform: translate(-50%, -215px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  to {
+      transform: translate(-310px, -50%);
+  }
+  10%,
+  50%,
+  90% {
+      transform: translate(-320px, -50%);
+  }
+  20%,
+  60% {
+      transform: translate(-300px, -50%);
+  }
+}
+
 /* === GRID === */
 
 .page{
@@ -715,7 +748,7 @@ img{
   border-radius: 50%;
   cursor: pointer;
 }
-.slider-dots .dot-current{
+.slider-dots .dot--current{
   background-color: var(--basic-red);
 }
 .slider-arrows{
@@ -723,8 +756,11 @@ img{
   padding: 0;
   margin: 0;
 }
-.slide-2{
+.slide-1, .slide-2{
   display: none;
+}
+.current-slide{
+  display: block;
 }
 .promo-slider-background{
   background-color: rgba(var(--basic-black-rgb), 0.25);
@@ -1029,6 +1065,12 @@ img{
   width: 180px;
   margin-bottom: 32px;
 }
+.services-slider-item{
+  display: none;
+}
+.services-slider-item--active{
+  display: block;
+}
 .services-slider-item__description{
   max-width: 320px;
 }
@@ -1047,10 +1089,11 @@ img{
 .service-btn:hover{
   background-color: var(--dark-blue-top);
 }
-.service-btn:focus{
+.service-btn--active, .service-btn--active:hover, .service-btn--active:focus{
   color: var(--dark-blue-bottom);
   background-color: var(--basic-white);
 }
+
 /* .services-slider{
   position: relative;
 } */
@@ -1820,6 +1863,7 @@ img{
   resize: none;
   border: 2px solid var(--active-grey);
   border-radius: 2px;
+  padding-left: 12px;
 }
 .modal-close{
   position: absolute;
@@ -1838,9 +1882,11 @@ img{
 .modal-feedback{
   display: none;
   width: 620px;
-  bottom: 354px;
-  right: 17px;
-  top: auto;
+  /* height: 430px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* right: 17px;*/
 }
 .feedback-form__input-part{
   padding: 39px 80px 37px;
@@ -1867,6 +1913,7 @@ img{
 .feedback-form__fields input{
   width: 220px;
   height: 38px;
+  padding-left: 12px;
 }
 .user-information-fields{
   display: flex;
@@ -1886,7 +1933,6 @@ img{
   font-size: 13px;
   line-height: 24px;
   color: var(--old-price-grey);
-  padding-left: 12px;
 }
 /* === MODAL-MAP === */
 
@@ -1894,9 +1940,9 @@ img{
   display: none;
   width: 943px;
   height: 449px;
-  bottom: 50%;
-  left: -15px;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 /* === MODAL-ADD-TO-CART === */
@@ -1904,10 +1950,10 @@ img{
 .modal-add-to-cart{
   display: none;
   width: 620px;
-  bottom: auto;
-  /* top: 655px; */
+  height: 282px;
   top: 50%;
-  left: 32px;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .add-to-cart__notification{
@@ -1932,7 +1978,7 @@ img{
 .form-button-container{
   display: flex;
   justify-content: flex-start;
-  padding: 37px 80px 37px 80px;
+  padding: 37px 112px 37px 114px;
 }
 .add-to-cart__button{
   width: 192px;
@@ -1966,4 +2012,10 @@ img{
 /* ===MODAL MODIFICATORS */
 .modal-show{
   display: block;
+  animation-name: bounce;
+  animation-duration: .5s;
+}
+.modal-error {
+  animation-name: shake;
+  animation-duration: .3s;
 }
