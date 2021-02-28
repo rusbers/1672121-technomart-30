@@ -1894,9 +1894,9 @@ img{
   display: none;
   width: 943px;
   height: 449px;
-  bottom: 336px;
+  bottom: 50%;
   left: -15px;
-  top: auto;
+  top: 50%;
 }
 
 /* === MODAL-ADD-TO-CART === */
@@ -1963,3 +1963,7 @@ img{
   background-color: var(--logo-red-active);
 } */
 
+/* ===MODAL MODIFICATORS */
+.modal-show{
+  display: block;
+}
