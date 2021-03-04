@@ -1247,7 +1247,7 @@ img{
   background-color: var(--bassic-background);
   padding-top: 64px;
   padding-bottom: 95px;
-  margin-bottom: 74px;
+  margin-bottom: 76px;
 }
 
 .services-slider{
@@ -1330,10 +1330,6 @@ img{
   padding-left: 22px;
   cursor: pointer;
 }
-.service-btn__delivery{
-  min-height: 64px;
-}
-
 .service-btn__guarantee,
 .service-btn__credit{
   -webkit-box-shadow: inset 0px 1px 0px var(--box-shadow-blue);
@@ -1767,6 +1763,7 @@ img{
 }
 .breadcrumbs-home{
   padding-right: 55px;
+  padding-top: 3px;
 }
 .breadcrumbs-item::after{
   content: "";
@@ -1806,7 +1803,7 @@ img{
   position: absolute;
   width: 14px;
   height: 12px;
-  top: 3px;
+  /* top: 3px; */
   background-image: url(../img/icons/icon-home.svg);
   background-repeat: no-repeat;
 }
