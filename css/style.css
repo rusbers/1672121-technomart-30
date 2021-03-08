@@ -149,33 +149,36 @@ img{
 /* === ANIMATIONS === */
 
 @keyframes bounce {
-  0% {
-      transform: translate(-50%, -2000px);
+  0%{
+    top: -100%;
   }
-  50% {
-      transform: translate(-50%, -130px);
+  30%{
+    top: -80%;
   }
-  70% {
-      transform: translate(-50%, -295px);
+  50%{
+    top: 40%;
   }
-  to {
-      transform: translate(-50%, -215px);
+  70%{
+    top: 30%;
+  }
+  100%{
+    top: 50%;
   }
 }
 
 @keyframes shake {
   0%,
-  to {
-      transform: translate(-310px, -50%);
+  100%{
+    margin-left: -310px;
   }
   10%,
   50%,
-  90% {
-      transform: translate(-320px, -50%);
+  90%{
+    margin-left: -315px;
   }
   20%,
-  60% {
-      transform: translate(-300px, -50%);
+  60%{
+    margin-left: -305px;
   }
 }
 
@@ -397,7 +400,7 @@ img{
 }
 
 .phone-number-wrapper{
-  border: 3px solid #FFFFFF;
+  border: 3px solid var(--basic-white);
   position: relative;
 }
 .phone-number::before{
@@ -515,7 +518,7 @@ img{
   margin-bottom: 59px;
 }
 .new-item{
-  display: block;
+  display: none;
   text-align: center;
   font-size: 14px;
   line-height: 18px;
@@ -832,7 +835,7 @@ img{
   flex-direction: column;
 }
 .product-list__item:hover{
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px rgba(var(--basic-black-rgb), 0.15);
 }
 .product-list__item:hover .feature-item,
 .product-list__item:focus-within .feature-item{
@@ -840,6 +843,9 @@ img{
 }
 .product-list__item:hover .feature-item--hovered,
 .product-list__item:focus-within .feature-item--hovered{
+  display: block;
+}
+.product-list__item--new .new-item{
   display: block;
 }
 .feature-item {
@@ -942,14 +948,14 @@ img{
   width: 185px;
 }
 .product-name a{
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
   color: var(--basic-black);
 }
 .old-price{
-  font-family:  "PT Sans", sans-serif;
+  font-family:  "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -960,7 +966,7 @@ img{
   display: block;
 }
 .discount-price{
-  font-family:  "PT Sans", sans-serif;
+  font-family:  "PT Sans", "Arial",  sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -1069,7 +1075,7 @@ img{
   width: 400px;
 }
 .text{
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   margin: 0;
@@ -1483,7 +1489,7 @@ img{
 }
 .breadcrumbs-item,
 .breadcrumbs-item a{
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-black);
@@ -1592,7 +1598,7 @@ img{
   background-color: var(--price-controls-decoration-line);
 }
 .price-controls label{
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
@@ -1611,7 +1617,7 @@ img{
   grid-row: 3/5;
 }
 .type-sort-title{
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -1635,7 +1641,7 @@ img{
   margin-bottom: 22.5px;
 }
 .filter-option{
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 19px;
   font-weight: 400;
@@ -1667,7 +1673,7 @@ img{
 }
 
 .filter__button{
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -1741,7 +1747,7 @@ img{
   height: 38px;
 }
 .sort-title{
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -1767,7 +1773,7 @@ img{
   margin: 0;
 }
 .sort-list__item a{
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -1839,7 +1845,7 @@ img{
   margin-bottom: 50px;
 }
 .pagination-list__item a{
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -1924,10 +1930,11 @@ img{
 .modal-feedback{
   display: none;
   width: 620px;
-  min-height: 430px;
+  height: 430px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  margin-left: -310px;
+  margin-top: -215px;
 }
 .feedback-form__input-part{
   padding: 39px 80px 37px;
@@ -1937,7 +1944,7 @@ img{
   background-color: var(--form-background-grey);
 }
 .feedback-form__send{
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -1971,7 +1978,7 @@ img{
 }
 .feedback-form__fields input::placeholder,
 .feedback-form__fields textarea::placeholder{
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--old-price-grey);
@@ -1984,11 +1991,12 @@ img{
 
 .modal-map{
   display: none;
-  width: 939px;
-  height: 449px;
+  width: 940px;
+  height: 450px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  margin-left: -470px;
+  margin-top: -225px;
 }
 .modal-close--map{
   right: 8px;
@@ -2002,11 +2010,12 @@ img{
   height: 282px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  margin-left: -310px;
+  margin-top: -141px;
 }
 
 .add-to-cart__notification{
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -2033,7 +2042,7 @@ img{
   height: 38px;
   border: none;
   background: transparent;
-  font-family: "Cuprum";
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -2062,16 +2071,16 @@ img{
   cursor: pointer;
 }
 
-/* ===MODAL MODIFICATORS */
+/* === MODAL MODIFICATORS === */
 
 .modal-show{
   display: block;
   animation-name: bounce;
-  animation-duration: .5s;
+  animation-duration: .3s;
 }
 .modal-error {
   animation-name: shake;
-  animation-duration: .3s;
+  animation-duration: .2s;
 }
 
 /* === BLANK STYLES === */
