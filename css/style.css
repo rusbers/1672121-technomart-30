@@ -1252,6 +1252,7 @@ img{
 }
 .footer-navigation a:active{
   opacity: 0.5;
+  text-decoration: none;
 }
 .main-footer-logo{
   display: block;
@@ -1303,6 +1304,7 @@ img{
 }
 .categories-list-item a:active{
   opacity: 0.5;
+  text-decoration: none;
 }
 .footer-wrapper-middle{
   display: flex;
@@ -1361,6 +1363,7 @@ img{
 .footer-mail a:active,
 .footer-designed-by a:active{
   color: var(--basic-red);
+  text-decoration: none;
 }
 .social-icon:hover .social-icon-bg,
 .social-icon:active .social-icon-bg{
